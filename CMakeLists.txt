@@ -4,7 +4,7 @@ project(LinearSystemsSolver)
 set(CMAKE_CXX_STANDARD 17)
 
 # Собираем исполняемый файл
-add_executable(solver
+add_executable(linear-equation-solvers
     src/main.cpp
     src/thomas_algorithm.cpp
     src/simple_iteration.cpp
@@ -12,4 +12,4 @@ add_executable(solver
 )
 
 # Подключаем заголовки
-target_include_directories(solver PRIVATE include)
+target_include_directories(linear-equation-solvers PRIVATE include)
