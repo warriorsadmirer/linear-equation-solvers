@@ -9,7 +9,6 @@ Thomas Algorithm (Tridiagonal Matrix Algorithm)
 
 Relaxation Iteration Method
 
-
 Run the compiled program:
 
 ./solver
