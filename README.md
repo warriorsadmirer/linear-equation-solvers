@@ -6,7 +6,10 @@
 A C++ implementation for solving systems of linear equations featuring:
 
 Thomas Algorithm (Tridiagonal Matrix Algorithm)
+
 Relaxation Iteration Method
 
+
 Run the compiled program:
+
 ./solver
