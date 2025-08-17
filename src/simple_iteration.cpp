@@ -3,11 +3,11 @@
 #include "simple_iteration.h"
 
 void simple_iteration_method(
-    double A[][5], double B[], int n, double x[],
+    double A[][n], double B[], double x[],
     double eps, double omega
 ) {
-    double x0[5] = {0};
-    double E[5] = {0};
+    double x0[n] = {0};
+    double E[n] = {0};
     double max = 0;
     int counter = 0;
 
@@ -32,5 +32,5 @@ void simple_iteration_method(
         counter++;
     } while (max > eps);
 
-    std::cout<< "\nКоличество итераций: " << counter;
+    std::cout << "\nIterations count: " << counter;
 }

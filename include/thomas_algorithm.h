@@ -1,3 +1,4 @@
 #pragma once
+#include "constants.h"
 
-void thomasAlgorithm(double A[5][5], double b[5], double x[5]);
+void thomasAlgorithm(double A[n][n], double b[n], double x[n]);

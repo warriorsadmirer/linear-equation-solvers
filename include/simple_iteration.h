@@ -1,6 +1,7 @@
 #pragma once
+#include "constants.h"
 
 void simple_iteration_method(
-    double A[][5], double B[], int n, double x[],
+    double A[][n], double B[], double x[],
     double eps, double omega
 );

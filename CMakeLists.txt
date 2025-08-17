@@ -3,7 +3,7 @@ project(LinearEquationSolvers)
 
 set(CMAKE_CXX_STANDARD 17)
 
-# Проверка существования исходных файлов
+# Checking the existence of source files
 foreach(SOURCE_FILE 
     main.cpp
     matrix_io.cpp
@@ -11,11 +11,11 @@ foreach(SOURCE_FILE
     thomas_algorithm.cpp
 )
     if(NOT EXISTS "${CMAKE_SOURCE_DIR}/src/${SOURCE_FILE}")
-        message(FATAL_ERROR "Файл src/${SOURCE_FILE} не найден!")
+        message(FATAL_ERROR "File src/${SOURCE_FILE} is not found")
     endif()
 endforeach()
 
-# Проверка заголовочных файлов
+# Checking header files
 foreach(HEADER_FILE
     constants.h
     matrix_io.h
@@ -23,11 +23,11 @@ foreach(HEADER_FILE
     thomas_algorithm.h
 )
     if(NOT EXISTS "${CMAKE_SOURCE_DIR}/include/${HEADER_FILE}")
-        message(FATAL_ERROR "Заголовочный файл include/${HEADER_FILE} не найден!")
+        message(FATAL_ERROR "Header file include/${HEADER_FILE} not found")
     endif()
 endforeach()
 
-# Создание исполняемого файла
+# Creating an executable file
 add_executable(solver
     src/main.cpp
     src/matrix_io.cpp
@@ -35,7 +35,7 @@ add_executable(solver
     src/thomas_algorithm.cpp
 )
 
-# Подключение заголовков
+# Connecting headers
 target_include_directories(solver PRIVATE include)
 
-message(STATUS "Конфигурация успешна! Проект собран в: ${CMAKE_SOURCE_DIR}")
+message(STATUS "The configuration is successful! The project is compiled in: ${CMAKE_SOURCE_DIR}")

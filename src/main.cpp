@@ -17,30 +17,30 @@ int main() {
     int choice;
 
     do {
-        std::cout << "\nМеню:\n"
-                 << "1. Метод прогонки\n"
-                 << "2. Метод простой итерации\n"
-                 << "3. Ввод данных\n"
-                 << "4. Показать систему уравнений\n"
-                 << "5. Выход\n"
-                 << "Введите ваш выбор: ";
+        std::cout << "\nMenu:\n"
+                 << "1. Thomas algorithm\n"
+                 << "2. Simple iteration method\n"
+                 << "3. Enter data\n"
+                 << "4. Show system of equations\n"
+                 << "5. Exit\n"
+                 << "Enter your choice: ";
         std::cin >> choice;
 
         switch (choice) {
             case 1:
                 thomasAlgorithm(A, b, x);
-                std::cout << "\nРешение методом прогонки:\n";
+                std::cout << "\nSolution by Thomas algorithm:\n";
                 for (int i = 0; i < n; i++)
-                    std::cout << "x" << i + 1 << "=" << x[i] << " " << std::endl;
+                    std::cout << "x" << i + 1 << " = " << x[i] << std::endl;
                 break;
             case 2:
-                simple_iteration_method(A, b, n, x, eps, omega);
-                std::cout << "\nРешение методом простой итерации:\n";
+                simple_iteration_method(A, b, x, eps, omega);
+                std::cout << "\nSolution by simple iteration method:\n";
                 for (int i = 0; i < n; i++)
-                    std::cout << "x" << i + 1 << "=" << x[i] << " " << std::endl;
+                    std::cout << "x" << i + 1 << " = " << x[i] << std::endl;
                 break;
             case 3:
-                inputData(A, b, n);
+                inputData(A, b);
                 break;
             case 4:
                 printMatrix(A, b);
@@ -48,7 +48,7 @@ int main() {
             case 5:
                 break;
             default:
-                std::cout << "Некорректный выбор." << std::endl;
+                std::cout << "Invalid choice." << std::endl;
         }
     } while (choice != 5);
 
